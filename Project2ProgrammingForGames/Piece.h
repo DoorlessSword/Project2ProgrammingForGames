@@ -1,6 +1,5 @@
 #pragma once
 #include "Shape.h"
-#include "Direction.h"
 
 class Piece
 {
@@ -13,13 +12,19 @@ public:
 	//Constructors
 	Piece();
 	Piece(double worldPosX, double worldPosY);
-	~Piece();
-	Piece(const Piece&);
+	virtual ~Piece();
 
-	virtual void move(double distance, Direction direction);
+	//virtual void move(double dist, int movTyp, int movDirection) = 0;
+	virtual void move() = 0;
 	
-	const Shape getShape();
-	const double getWorldPositionX();
-	const double getWorldPositionY();
+	Shape getShape() const {
+		return shape;
+	}
+	double getWorldPositionX() const {
+		return worldPositionX;
+	}
+	double getWorldPositionY() const {
+		return worldPositionY;
+	}
 };
 

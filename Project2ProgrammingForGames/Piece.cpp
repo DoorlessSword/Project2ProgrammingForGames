@@ -16,23 +16,3 @@ Piece::Piece(double worldPosX, double worldPosY)
 Piece::~Piece()
 {
 }
-
-Piece::Piece(const Piece&)
-{
-
-}
-
-const Shape Piece::getShape()
-{
-	return shape;
-}
-
-const double Piece::getWorldPositionX()
-{
-	return worldPositionX;
-}
-
-const double Piece::getWorldPositionY()
-{
-	return worldPositionY;
-}

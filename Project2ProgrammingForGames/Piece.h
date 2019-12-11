@@ -2,6 +2,11 @@
 #include "Shape.h"
 #include <string>
 
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 class Piece
 {
 protected:
@@ -13,9 +18,7 @@ public:
 	//Constructors
 	Piece();
 	Piece(double worldPosX, double worldPosY);
-	virtual ~Piece();
 
-	//virtual void move(double dist, int movTyp, int movDirection) = 0;
 	virtual void move() = 0;
 	
 	Shape getShape() const {

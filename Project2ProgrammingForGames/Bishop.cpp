@@ -4,6 +4,11 @@
 #include <iostream>
 #include <random>
 
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 Bishop::Bishop()
 {
 }
@@ -13,10 +18,6 @@ Bishop::Bishop(double worldPosX, double worldPosY)
 	worldPositionX = worldPosX;
 	worldPositionY = worldPosY;
 	shape = CIRCLE;
-}
-
-Bishop::~Bishop()
-{
 }
 
 void Bishop::move()

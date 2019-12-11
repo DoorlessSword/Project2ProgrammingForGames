@@ -5,6 +5,11 @@
 #include <vector>
 #include <iostream>
 
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 int rookScore = 0;
 int bishopScore = 0;
 int queenScore = 0;
@@ -66,8 +71,8 @@ void collisionCheck(std::vector<Piece*> pieces, int j, bool& toBeDeleted, int& i
 			//i = square
 			//modified and expanded upon method presented by http://www.jeffreythompson.org/collision-detection/circle-rect.php
 			else if (pieces[k]->getShape() == CIRCLE && pieces[i]->getShape() == SQUARE) {
-				double testX = pieces[k]->getWorldPositionX();	//circleX pos
-				double testY = pieces[k]->getWorldPositionY();	//circleY pos
+				double testX = pieces[k]->getWorldPositionX();	//circle Xpos
+				double testY = pieces[k]->getWorldPositionY();	//circle Ypos
 
 				if (pieces[k]->getWorldPositionX() < pieces[i]->getWorldPositionX() - 1) {
 					testX = pieces[i]->getWorldPositionX();
@@ -189,20 +194,12 @@ int main() {
 			collisionCheck(pieces, j, toBeDeleted, indexToBeDeleted);
 			if (toBeDeleted) {
 				std::cout << pieces[indexToBeDeleted]->getType() << " is destroyed" << std::endl;;
-				/*std::cout << pieces[j]->getType() << " position is ("
-					<< pieces[j]->getWorldPositionX() << ", "
-					<< pieces[j]->getWorldPositionY() << ")" << std::endl;*/
 				pieces.erase(pieces.begin() + indexToBeDeleted);
 				toBeDeleted = false;
 				indexToBeDeleted = 0;
 				
 				break;
 			}
-			/*else {
-				std::cout << pieces[j]->getType() << " position is ("
-					<< pieces[j]->getWorldPositionX() << ", "
-					<< pieces[j]->getWorldPositionY() << ")" << std::endl;
-			}*/
 		}
 		if (pieces.size() <= 1) {
 			break;

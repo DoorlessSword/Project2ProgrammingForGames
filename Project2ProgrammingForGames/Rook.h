@@ -1,13 +1,17 @@
 #pragma once
 #include "Piece.h"
+
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 class Rook : public Piece
 {
 public:
 	Rook();
 	Rook(double worldPosX, double worldPosY);
-	~Rook();
 
-	//void move(double dist, int movTyp, int movDirection);
 	void move();
 
 	int getSize() const {

@@ -3,6 +3,11 @@
 #include <time.h>
 #include <random>
 
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 Queen::Queen()
 {
 }
@@ -12,10 +17,6 @@ Queen::Queen(double worldPosX, double worldPosY) : Piece(worldPosX, worldPosY)
 	worldPositionX = worldPosX;
 	worldPositionY = worldPosY;
 	shape = CIRCLE;
-}
-
-Queen::~Queen()
-{
 }
 
 void Queen::move()

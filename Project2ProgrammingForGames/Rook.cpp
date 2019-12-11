@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <random>
 
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 Rook::Rook()
 {
 }
@@ -12,10 +17,6 @@ Rook::Rook(double worldPosX, double worldPosY)
 	worldPositionX = worldPosX;
 	worldPositionY = worldPosY;
 	shape = SQUARE;
-}
-
-Rook::~Rook()
-{
 }
 
 void Rook::move()

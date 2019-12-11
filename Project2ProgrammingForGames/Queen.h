@@ -1,13 +1,17 @@
 #pragma once
 #include "Piece.h"
+
+/*
+Author: Patrick Lindley
+Student No: 170461106
+*/
+
 class Queen : public Piece
 {
 public:
 	Queen();
 	Queen(double worldPosX, double worldPosY);
-	~Queen();
 
-	//void move(double dist, int movTyp, int movDirection);
 	void move();
 
 	int getSize() const {

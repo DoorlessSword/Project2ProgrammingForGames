@@ -1,5 +1,6 @@
 #pragma once
 #include "Shape.h"
+#include <string>
 
 class Piece
 {
@@ -26,5 +27,9 @@ public:
 	double getWorldPositionY() const {
 		return worldPositionY;
 	}
+	
+	virtual int getSize() const = 0;
+	
+	virtual std::string getType() = 0;
 };
 

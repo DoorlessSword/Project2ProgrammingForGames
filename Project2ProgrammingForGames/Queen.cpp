@@ -38,8 +38,8 @@ void Queen::move()
 				move();
 			}
 			else {
-				worldPositionX += distance;
-				worldPositionY += distance;
+				worldPositionX += distance / std::sqrt(2);
+				worldPositionY += distance / std::sqrt(2);
 			}
 		}
 		//move top to bottom
@@ -48,8 +48,8 @@ void Queen::move()
 				move();
 			}
 			else {
-				worldPositionX -= distance;
-				worldPositionY -= distance;
+				worldPositionX -= distance / std::sqrt(2);
+				worldPositionY -= distance / std::sqrt(2);
 			}
 		}
 	}
@@ -61,8 +61,8 @@ void Queen::move()
 				move();
 			}
 			else {
-				worldPositionX -= distance;
-				worldPositionY += distance;
+				worldPositionX -= distance / std::sqrt(2);
+				worldPositionY += distance / std::sqrt(2);
 			}
 		}
 		//move top to bottom
@@ -71,8 +71,8 @@ void Queen::move()
 				move();
 			}
 			else {
-				worldPositionX += distance;
-				worldPositionY -= distance;
+				worldPositionX += distance / std::sqrt(2);
+				worldPositionY -= distance / std::sqrt(2);
 			}
 		}
 	}
